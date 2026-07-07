@@ -28,9 +28,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // Path-form pre-publish (no tags this phase); flips to URL post-tag.
-        .package(path: "../../swift-primitives/swift-linter-primitives"),
-        .package(path: "../../swift-foundations/swift-institute-linter-rules"),
+        // URL + branch form (mirroring swift-primitives-linter-rules). Local
+        // path-form deps are rejected by SwiftPM when this package is itself
+        // consumed via a revision/branch requirement (the consumption model:
+        // consumers pin `branch: "main"`, resolved to the local clone through
+        // ~/Library/org.swift.swiftpm/configuration/mirrors.json). A
+        // revision-pinned package may not carry local-path dependencies.
+        .package(url: "https://github.com/swift-primitives/swift-linter-primitives.git", branch: "main"),
+        .package(url: "https://github.com/swift-foundations/swift-institute-linter-rules.git", branch: "main"),
     ],
     targets: [
         .target(
