@@ -5,7 +5,7 @@
 
 The standards-tier (L2) rule bundle for [swift-linter](https://github.com/swift-foundations/swift-linter): the institute-tier bundle with exactly two naming rules subtracted, published as a single bundle, `Lint.Rule.Bundle.standards`.
 
-Layer-2 Standards packages optimize for 1:1 spec encodings. Identifiers that are deterministic transliterations of spec-defined tokens — per the specification community's own naming convention (W3C CSSOM camelCase like `animationName` / `timingFunction`; IEEE 754 operation names like `roundAwayFromZero`; POSIX symbols) — are spec-mirroring names governed by `[API-NAME-003]`. The two compound-naming rules would mechanically fire on those legitimate spec-mirrors, so they are opted out at the standards tier. Both rules remain fully active at L1 (primitives) and L3 (foundations).
+Layer-2 Standards packages optimize for 1:1 spec encodings. Identifiers that are deterministic transliterations of spec-defined tokens — per the specification community's own naming convention (W3C CSSOM camelCase like `animationName` / `timingFunction`; IEEE 754 operation names like `roundAwayFromZero`; POSIX symbols) — are spec-mirroring names, which the institute's naming conventions explicitly permit. The two compound-naming rules would mechanically fire on those legitimate spec-mirrors, so they are opted out at the standards tier. Both rules remain fully active at L1 (primitives) and L3 (foundations).
 
 ---
 
@@ -13,10 +13,10 @@ Layer-2 Standards packages optimize for 1:1 spec encodings. Identifiers that are
 
 `Lint.Rule.Bundle.standards` equals `Lint.Rule.Bundle.institute` minus these two rules:
 
-| Rule | Citation | Fires on |
-|------|----------|----------|
-| `compound identifier` | `[API-NAME-002]` | Compound camelCase method / property names (`walkFiles` instead of `walk.files()`) |
-| `compound type name` | `[API-NAME-001]` | Compound type names outside the `Nest.Name` pattern (`FileDirectoryWalk` instead of `File.Directory.Walk`) |
+| Rule | Fires on |
+|------|----------|
+| `compound identifier` | Compound camelCase method / property names (`walkFiles` instead of `walk.files()`) |
+| `compound type name` | Compound type names outside the `Nest.Name` pattern (`FileDirectoryWalk` instead of `File.Directory.Walk`) |
 
 Every other institute-tier rule (which transitively includes the universal bundle) stays active — Foundation-import bans, typed-throws discipline, memory-safety rules, structural rules, and the remaining naming rules (`compound suite name`, `redundant prefix`, `nested tag`, …) all fire unchanged.
 
