@@ -19,10 +19,10 @@ import Linter
 import Linter_Standards_Rules
 
 Lint.run(dependencies: [
-    .package(
-        path: ".",
-        products: ["Linter Standards Rules"]
-    ),
+  .package(
+    path: ".",
+    products: ["Linter Standards Rules"]
+  )
 ]) {
-    Lint.Rule.Bundle.standards
+  Lint.Rule.Bundle.standards
 }
