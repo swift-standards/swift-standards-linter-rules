@@ -1,8 +1,0 @@
-# SwiftLint configuration for swift-standards-linter-rules
-# Inherits from the shared parent configuration in swift-standards
-
-parent_config: https://raw.githubusercontent.com/swift-standards/.github/main/.swiftlint.yml
-
-# Package-specific overrides (if needed)
-# This pack declares no rules of its own — it only subtracts two naming
-# rules from the institute bundle — so no self-referential exemptions apply.
