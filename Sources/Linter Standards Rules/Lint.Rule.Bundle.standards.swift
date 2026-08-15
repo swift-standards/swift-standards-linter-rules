@@ -46,18 +46,18 @@ public import Linter_Primitives
 /// standards bundle tracks them automatically — only the two named
 /// exclusions are ever removed.
 extension Lint.Rule.Bundle {
-  /// The standards-tier rule bundle: the institute-tier bundle minus the
-  /// two compound-naming rules that spec-token transliterations opt out
-  /// of at L2 per `[API-NAME-003]`.
-  public static let standards: [Lint.Rule.Configuration] =
-    Lint.Rule.Bundle.institute.excluding(rules: [
-      // [API-NAME-002] compound method / property identifiers — spec
-      // tokens (CSSOM `animationName`, POSIX operation names) mirror
-      // the specification and are exempt per [API-NAME-003] at L2.
-      Lint.Rule.`compound identifier`.id,
-      // [API-NAME-001] compound type names — spec-mirroring type
-      // namespaces (IEEE 754 `RoundAwayFromZero`, CSSOM shorthands)
-      // are governed by [API-NAME-003] at L2.
-      Lint.Rule.`compound type name`.id,
-    ])
+    /// The standards-tier rule bundle: the institute-tier bundle minus the
+    /// two compound-naming rules that spec-token transliterations opt out
+    /// of at L2 per `[API-NAME-003]`.
+    public static let standards: [Lint.Rule.Configuration] =
+        Lint.Rule.Bundle.institute.excluding(rules: [
+            // [API-NAME-002] compound method / property identifiers — spec
+            // tokens (CSSOM `animationName`, POSIX operation names) mirror
+            // the specification and are exempt per [API-NAME-003] at L2.
+            Lint.Rule.`compound identifier`.id,
+            // [API-NAME-001] compound type names — spec-mirroring type
+            // namespaces (IEEE 754 `RoundAwayFromZero`, CSSOM shorthands)
+            // are governed by [API-NAME-003] at L2.
+            Lint.Rule.`compound type name`.id,
+        ])
 }
