@@ -16,7 +16,7 @@ import PackageDescription
 let package = Package(
   name: "swift-standards-linter-rules",
   platforms: [
-    .macOS(.v26)
+    .macOS("27")
   ],
   products: [
     // Aggregate bundle — publishes `Lint.Rule.Bundle.standards`
