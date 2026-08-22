@@ -17,7 +17,11 @@ import Testing
 
 extension Lint.Rule.Bundle {
     @Suite
-    struct `standards Tests` {}
+    struct `standards Tests` {
+        @Suite struct Unit {}
+        @Suite struct `Edge Case` {}
+        @Suite struct Integration {}
+    }
 }
 
 extension Lint.Rule.Bundle.`standards Tests` {
