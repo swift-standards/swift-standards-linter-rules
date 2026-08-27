@@ -3,9 +3,9 @@
 ![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
 [![CI](https://github.com/swift-standards/swift-standards-linter-rules/actions/workflows/ci.yml/badge.svg)](https://github.com/swift-standards/swift-standards-linter-rules/actions/workflows/ci.yml)
 
-The standards-tier (L2) rule bundle for [swift-linter](https://github.com/swift-foundations/swift-linter): the institute-tier bundle with exactly two naming rules subtracted, published as a single bundle, `Lint.Rule.Bundle.standards`.
+The standards-tier (L3) rule bundle for [swift-linter](https://github.com/swift-compositions/swift-linter): the institute-tier bundle with exactly two naming rules subtracted, published as a single bundle, `Lint.Rule.Bundle.standards`.
 
-Layer-2 Standards packages optimize for 1:1 spec encodings. Identifiers that are deterministic transliterations of spec-defined tokens — per the specification community's own naming convention (W3C CSSOM camelCase like `animationName` / `timingFunction`; IEEE 754 operation names like `roundAwayFromZero`; POSIX symbols) — are spec-mirroring names, which the institute's naming conventions explicitly permit. The two compound-naming rules would mechanically fire on those legitimate spec-mirrors, so they are opted out at the standards tier. Both rules remain fully active at L1 (primitives) and L3 (foundations).
+Layer-3 Standards packages optimize for 1:1 spec encodings. Identifiers that are deterministic transliterations of spec-defined tokens — per the specification community's own naming convention (W3C CSSOM camelCase like `animationName` / `timingFunction`; IEEE 754 operation names like `roundAwayFromZero`; POSIX symbols) — are spec-mirroring names, which the institute's naming conventions explicitly permit. The two compound-naming rules would mechanically fire on those legitimate spec-mirrors, so they are opted out at the standards tier. Both rules remain fully active at L2 (molecules) and L4 (compositions).
 
 ---
 
@@ -86,15 +86,15 @@ The package is pre-1.0 — depend on `branch: "main"` until `0.1.0` is tagged. R
 
 | Product | Contents | When to import |
 |---------|----------|----------------|
-| `Linter Standards Rules` | The aggregate — `Lint.Rule.Bundle.standards`, re-exporting the institute-tier bundle minus the two compound-naming rules | Standards-tier (L2) consumers |
+| `Linter Standards Rules` | The aggregate — `Lint.Rule.Bundle.standards`, re-exporting the institute-tier bundle minus the two compound-naming rules | Standards-tier (L3) consumers |
 
 ---
 
 ## Related Packages
 
-- [`swift-linter-primitives`](https://github.com/swift-primitives/swift-linter-primitives) — the `Lint.Rule` / `Lint.Rule.Configuration` vocabulary and the `excluding(rules:)` combinator this bundle is built with.
-- [`swift-institute-linter-rules`](https://github.com/swift-foundations/swift-institute-linter-rules) — the institute-tier bundle this package subtracts from, and the leaf `Institute Linter Rule Naming` module that declares the two excluded rules.
-- [`swift-primitives-linter-rules`](https://github.com/swift-primitives/swift-primitives-linter-rules) — the primitives-tier sibling bundle (`Lint.Rule.Bundle.primitives`, institute plus primitives-tier rules).
+- [`swift-linter`](https://github.com/swift-molecules/swift-linter) — the `Lint.Rule` / `Lint.Rule.Configuration` vocabulary and the `excluding(rules:)` combinator this bundle is built with.
+- [`swift-institute-linter-rules`](https://github.com/swift-compositions/swift-institute-linter-rules) — the institute-tier bundle this package subtracts from, and the leaf `Institute Linter Rule Naming` module that declares the two excluded rules.
+- [`swift-primitives-linter-rules`](https://github.com/swift-molecules/swift-primitives-linter-rules) — the primitives-tier sibling bundle (`Lint.Rule.Bundle.primitives`, institute plus primitives-tier rules).
 
 ---
 

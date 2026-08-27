@@ -1,5 +1,5 @@
 # .github/metadata.yaml
-description: "Standards-tier lint bundle for swift-linter — Lint.Rule.Bundle.standards is the institute bundle minus the two compound-naming rules ([API-NAME-001]/[API-NAME-002]), which spec-token transliterations opt out of at L2 per [API-NAME-003]."
+description: "Standards-tier lint bundle for swift-linter — Lint.Rule.Bundle.standards is the institute bundle minus the two compound-naming rules ([API-NAME-001]/[API-NAME-002]), which spec-token transliterations opt out of at L3 per [API-NAME-003]."
 topics:
   - standards
   - linter

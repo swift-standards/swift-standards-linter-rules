@@ -21,7 +21,7 @@ let package = Package(
     products: [
         // Aggregate bundle — publishes `Lint.Rule.Bundle.standards`
         // (= the institute bundle MINUS the two compound-naming rules).
-        // Standards-tier (L2) consumers depend on this product alone.
+        // Standards-tier (L3) consumers depend on this product alone.
         .library(
             name: "Linter Standards Rules",
             targets: ["Linter Standards Rules"]
@@ -35,11 +35,11 @@ let package = Package(
         // ~/Library/org.swift.swiftpm/configuration/mirrors.json). A
         // revision-pinned package may not carry local-path dependencies.
         .package(
-            url: "https://github.com/swift-primitives/swift-linter-primitives.git",
+            url: "https://github.com/swift-molecules/swift-linter.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-foundations/swift-institute-linter-rules.git",
+            url: "https://github.com/swift-compositions/swift-institute-linter-rules.git",
             branch: "main"
         ),
     ],
@@ -49,7 +49,7 @@ let package = Package(
             dependencies: [
                 // The `Lint.Rule.Bundle` / `Lint.Rule.Configuration` vocabulary
                 // and the `excluding(rules:)` combinator.
-                .product(name: "Linter Primitives", package: "swift-linter-primitives"),
+                .product(name: "Linter", package: "swift-linter"),
                 // The institute-tier bundle this package subtracts from.
                 .product(name: "Linter Institute Rules", package: "swift-institute-linter-rules"),
                 // Leaf module for the two excluded rules, referenced by
@@ -62,7 +62,7 @@ let package = Package(
             name: "Linter Standards Rules Tests",
             dependencies: [
                 .target(name: "Linter Standards Rules"),
-                .product(name: "Linter Primitives", package: "swift-linter-primitives"),
+                .product(name: "Linter", package: "swift-linter"),
                 .product(name: "Linter Institute Rules", package: "swift-institute-linter-rules"),
                 .product(name: "Institute Linter Rule Naming", package: "swift-institute-linter-rules"),
             ]
