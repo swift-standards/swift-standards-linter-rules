@@ -11,7 +11,7 @@
 
 public import Institute_Linter_Rule_Naming
 public import Linter_Institute_Rules
-public import Linter
+public import Lint
 
 /// Standards-tier rule bundle.
 ///

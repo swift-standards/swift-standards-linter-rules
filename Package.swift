@@ -35,7 +35,7 @@ let package = Package(
         // ~/Library/org.swift.swiftpm/configuration/mirrors.json). A
         // revision-pinned package may not carry local-path dependencies.
         .package(
-            url: "https://github.com/swift-molecules/swift-linter.git",
+            url: "https://github.com/swift-molecules/swift-lint.git",
             branch: "main"
         ),
         .package(
@@ -49,7 +49,7 @@ let package = Package(
             dependencies: [
                 // The `Lint.Rule.Bundle` / `Lint.Rule.Configuration` vocabulary
                 // and the `excluding(rules:)` combinator.
-                .product(name: "Linter", package: "swift-linter"),
+                .product(name: "Lint", package: "swift-lint"),
                 // The institute-tier bundle this package subtracts from.
                 .product(name: "Linter Institute Rules", package: "swift-institute-linter-rules"),
                 // Leaf module for the two excluded rules, referenced by
@@ -62,7 +62,7 @@ let package = Package(
             name: "Linter Standards Rules Tests",
             dependencies: [
                 .target(name: "Linter Standards Rules"),
-                .product(name: "Linter", package: "swift-linter"),
+                .product(name: "Lint", package: "swift-lint"),
                 .product(name: "Linter Institute Rules", package: "swift-institute-linter-rules"),
                 .product(name: "Institute Linter Rule Naming", package: "swift-institute-linter-rules"),
             ]
