@@ -1,5 +1,5 @@
-public import Institute_Linter_Rule_Naming
-public import Linter_Institute_Rules
+internal import Institute_Linter_Rule_Naming
+internal import Linter_Institute_Rules
 public import Lint
 
 extension Lint.Rule.Bundle {
