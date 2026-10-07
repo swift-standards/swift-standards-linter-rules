@@ -60,6 +60,7 @@ let package = Package(
                 // `.id` in the bundle definition. Required directly under
                 // SE-0444 MemberImportVisibility ([LINT-BUNDLE-003]).
                 .product(name: "Institute Linter Rule Naming", package: "swift-institute-linter-rules"),
+                .product(name: "Institute Linter Rule Structure", package: "swift-institute-linter-rules"),
             ]
         ),
         .testTarget(
@@ -69,6 +70,8 @@ let package = Package(
                 .product(name: "Lint", package: "swift-lint"),
                 .product(name: "Linter Institute Rules", package: "swift-institute-linter-rules"),
                 .product(name: "Institute Linter Rule Naming", package: "swift-institute-linter-rules"),
+                .product(name: "Institute Linter Rule Structure", package: "swift-institute-linter-rules"),
+                .product(name: "Institute Linter Rule Testing", package: "swift-institute-linter-rules"),
             ]
         ),
     ],
