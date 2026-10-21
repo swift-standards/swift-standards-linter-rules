@@ -12,8 +12,8 @@
 import Institute_Linter_Rule_Naming
 import Institute_Linter_Rule_Structure
 import Institute_Linter_Rule_Testing
-import Linter_Institute_Rules
 import Lint
+import Linter_Institute_Rules
 import Linter_Standards_Rules
 import Testing
 

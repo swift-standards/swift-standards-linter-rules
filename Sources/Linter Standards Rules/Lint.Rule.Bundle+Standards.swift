@@ -1,7 +1,7 @@
 internal import Institute_Linter_Rule_Naming
 internal import Institute_Linter_Rule_Structure
-internal import Linter_Institute_Rules
 public import Lint
+internal import Linter_Institute_Rules
 
 extension Lint.Rule.Bundle {
     public static let standards: [Lint.Rule.Configuration] =
